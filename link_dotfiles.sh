@@ -13,4 +13,4 @@ curl -sS https://starship.rs/install.sh | sh
 # Symlinks
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
-
+ln -s ~/.dotfiles/starship.toml ~/.config/starship.toml
