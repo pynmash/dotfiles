@@ -4,7 +4,7 @@
 sudo pacman -Syu
 sudo pacman -S yay
 yay -Syu
-yay -S spotify nvim lazygit kitty
+yay -S spotify nvim lazygit kitty firefox ttf-fira-code
 
 
 
