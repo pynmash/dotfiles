@@ -30,3 +30,7 @@ ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/starship.toml ~/.config/starship.toml
 ln -s ~/.dotfiles/nvim ~/.config/nvim
 ln -s ~/.dotfiles/i3 ~/.config/i3
+
+# Switch shells
+chsh -s /usr/bin/zsh
+
