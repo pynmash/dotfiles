@@ -18,6 +18,10 @@ alias vim="nvim"
 alias env="source .venv/bin/activate"
 alias ls="eza --icons --group-directories-first"
 alias la="eza --icons --group-directories-first -a"
+alias cat="bat"
+alias cd="z"
+alias ff="fzf"
+alias lg="lazygit"
 
 # Init starship prompt
 eval "$(starship init zsh)"
