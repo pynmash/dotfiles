@@ -5,3 +5,8 @@
 
 ### 2. Run setup.sh 
 ```bash setup.sh```
+
+### 3. Symlink configs
+```stow */```
+OR to specify which configs to Symlinkuse `stow <file names>` eg:
+```stow zsh i3 kitty```
