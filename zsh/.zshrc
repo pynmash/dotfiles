@@ -19,6 +19,7 @@ alias env="source .venv/bin/activate"
 alias ls="eza --icons --group-directories-first"
 alias la="eza --icons --group-directories-first -a"
 alias cd="z"
+alias ff="fzf"
 alias lg="lazygit"
 
 # Init starship prompt
