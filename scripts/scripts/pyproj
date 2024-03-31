@@ -1,4 +1,4 @@
-!#/bin/env
+#!/bin/bash
 
 echo "----------------------------"
 echo "Creating new python project"
@@ -11,3 +11,14 @@ echo "------------------------------------"
 echo "Creating python virtual environment"
 echo "------------------------------------"
 python3 -m venv .venv
+
+echo "-----------------------------"
+echo "Initialising git repostitory"
+echo "-----------------------------"
+touch README.md
+git init
+touch .gitignore
+echo ".venv" >> .gitignore
+git add .
+git commit -m "First commit"
+gh repo create $1 --public --source=. --remote=upstream --push

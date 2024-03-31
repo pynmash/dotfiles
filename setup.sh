@@ -8,7 +8,7 @@ echo "-----------------------------------------------"
 sudo pacman -Syu
 sudo pacman -S yay git
 yay -Syu
-yay -S spotify nvim lazygit kitty firefox ttf-firacode-nerd tmux ripgrep dmenu zsh eza fzf bat stow
+yay -S spotify nvim lazygit kitty firefox ttf-firacode-nerd tmux ripgrep dmenu zsh eza fzf bat stow github-cli
 
 
 echo "---------------------------"
@@ -59,6 +59,11 @@ echo "SSH Key: $SSH_KEY"
 read RETURN
 ssh -T git@github.com
 
+
+echo "----------------------"
+echo "Setting up GitHub CLI"
+echo "----------------------"
+gh auth login
 
 echo "-----"
 echo "Done"
