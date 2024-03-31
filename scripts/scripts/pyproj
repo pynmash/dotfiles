@@ -1,0 +1,13 @@
+!#/bin/env
+
+echo "----------------------------"
+echo "Creating new python project"
+echo "----------------------------"
+
+mkdir ~/code/$1
+cd ~/code/$1
+
+echo "------------------------------------"
+echo "Creating python virtual environment"
+echo "------------------------------------"
+python3 -m venv .venv

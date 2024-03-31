@@ -21,6 +21,8 @@ alias la="eza --icons --group-directories-first -a"
 alias cd="z"
 alias ff="fzf"
 alias lg="lazygit"
+alias src="source .venv/bin/activate"
+alias srcd="deactivate"
 
 # Init starship prompt
 eval "$(starship init zsh)"
@@ -32,3 +34,5 @@ eval "$(zoxide init zsh)"
 export FZF_DEFAULT_OPS="--extended"
 export FZF_DEFAULT_COMMAND="fd --type f"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+PATH=$PATH:/home/dan/scripts:
