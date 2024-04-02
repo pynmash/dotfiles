@@ -13,6 +13,9 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# Swap caps lock and escape keys (for better vim experience)
+setxkbmap -option caps:swapescape
+
 # Aliases
 alias vim="nvim"
 alias env="source .venv/bin/activate"
