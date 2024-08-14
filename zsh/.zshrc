@@ -18,18 +18,19 @@ export VISUAL=nvim
 export EDITOR="$VISUAL"
 
 # Swap caps lock and escape keys (for better vim experience)
-setxkbmap -option caps:swapescape
+# setxkbmap -option caps:swapescape
 
 # Aliases
 alias vim="nvim"
 alias env="source .venv/bin/activate"
 alias ls="eza --icons --group-directories-first"
 alias la="eza --icons --group-directories-first -a"
-alias cd="z"
+# alias cd="z"
 alias ff="fzf"
 alias lg="lazygit"
 alias src="source .venv/bin/activate"
 alias srcd="deactivate"
+alias relcom="git log --oneline -1 && git log --pretty=format:'%h - %an, %ar : %s' | awk '{if(NR>1)print}'"
 
 # Fzf
 source /usr/share/fzf/key-bindings.zsh
@@ -39,7 +40,7 @@ source /usr/share/fzf/completion.zsh
 eval "$(starship init zsh)"
 
 eval "$(thefuck --alias)"
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPS="--extended"
@@ -51,3 +52,4 @@ export PATH="$PATH:/home/dan/scripts:/home/dan/.cargo/bin"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+source /usr/share/nvm/init-nvm.sh
