@@ -25,12 +25,14 @@ alias vim="nvim"
 alias env="source .venv/bin/activate"
 alias ls="eza --icons --group-directories-first"
 alias la="eza --icons --group-directories-first -a"
-# alias cd="z"
 alias ff="fzf"
-alias lg="lazygit"
+alias gg="lazygit"
+alias mkpp="git init && python -m venv .venv && echo './venv' > .gitignore && source .venv/bin/activate && nvim main.py"
+alias py="python"
 alias src="source .venv/bin/activate"
 alias srcd="deactivate"
 alias relcom="git log --oneline -1 && git log --pretty=format:'%h - %an, %ar : %s' | awk '{if(NR>1)print}'"
+alias emacs="emacsclient -t"
 
 # Fzf
 source /usr/share/fzf/key-bindings.zsh
@@ -47,7 +49,11 @@ export FZF_DEFAULT_OPS="--extended"
 export FZF_DEFAULT_COMMAND="fd --type f"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-export PATH="$PATH:/home/dan/scripts:/home/dan/.cargo/bin"
+export PATH="$HOME/dan/scripts:$HOME/dan/.cargo/bin:$HOME/.emacs.d/bin:$PATH"
+export PATH="$HOME/.config/emacs/bin:$PATH"
+
+# Bind capslock to eacapet
+export XKB_DEFAULT_OPTIONS=caps:escape
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
