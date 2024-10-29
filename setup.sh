@@ -12,9 +12,9 @@ makepkg -si
 yay -Syu
 yay -S spotify pulseaudio pavucontrol neovim lazygit kitty firefox ttf-firacode-nerd tmux ripgrep zsh eza fzf bat stow flameshot qtile rofi
 
-echo "---------------------------"
-echo "Installing Starship Prompt"
-echo "---------------------------"
+# echo "---------------------------"
+# echo "Installing Starship Prompt"
+# echo "---------------------------"
 # Install Starship prompt
 # curl -sS https://starship.rs/install.sh | sh
 
