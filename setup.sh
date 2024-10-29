@@ -5,25 +5,24 @@
 echo "-----------------------------------------------"
 echo "Updating system and installing needed packages"
 echo "-----------------------------------------------"
-sudo pacman -Syu
-sudo pacman -S yay git
+sudo pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
 yay -Syu
-yay -S spotify nvim lazygit kitty firefox ttf-firacode-nerd tmux ripgrep dmenu zsh eza fzf bat stow github-cli
-
+yay -S spotify pulseaudio pavucontrol neovim lazygit kitty firefox ttf-firacode-nerd tmux ripgrep zsh eza fzf bat stow flameshot qtile
 
 echo "---------------------------"
 echo "Installing Starship Prompt"
 echo "---------------------------"
 # Install Starship prompt
-curl -sS https://starship.rs/install.sh | sh
-
+# curl -sS https://starship.rs/install.sh | sh
 
 echo "-----------------------"
 echo "Swtiching to ZSH shell"
 echo "-----------------------"
 # Switch shells
 chsh -s /usr/bin/zsh
-
 
 # Set up git
 echo "---------------"
@@ -59,11 +58,10 @@ echo "SSH Key: $SSH_KEY"
 read RETURN
 ssh -T git@github.com
 
-
-echo "----------------------"
-echo "Setting up GitHub CLI"
-echo "----------------------"
-gh auth login
+# echo "----------------------"
+# echo "Setting up GitHub CLI"
+# echo "----------------------"
+# gh auth login
 
 echo "-----"
 echo "Done"
