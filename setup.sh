@@ -10,7 +10,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 yay -Syu
-yay -S spotify pulseaudio pavucontrol neovim lazygit kitty firefox ttf-firacode-nerd tmux ripgrep zsh eza fzf bat stow flameshot qtile
+yay -S spotify pulseaudio pavucontrol neovim lazygit kitty firefox ttf-firacode-nerd tmux ripgrep zsh eza fzf bat stow flameshot qtile rofi
 
 echo "---------------------------"
 echo "Installing Starship Prompt"
