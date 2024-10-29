@@ -17,6 +17,16 @@ compinit
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 
+# Set the prompt
+PROMPT=' %B%F{blue}%3~%f%b %(!.#.⋗ '
+autoload -Uz vcs_info
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+setopt prompt_subst
+RPROMPT=\$vcs_info_msg_0_
+zstyle ':vcs_info:git:*' formats '%F{blue}(%b)%r%f'
+zstyle ':vcs_info:*' enable git
+
 # Swap caps lock and escape keys (for better vim experience)
 # setxkbmap -option caps:swapescape
 
@@ -32,14 +42,13 @@ alias py="python"
 alias src="source .venv/bin/activate"
 alias srcd="deactivate"
 alias relcom="git log --oneline -1 && git log --pretty=format:'%h - %an, %ar : %s' | awk '{if(NR>1)print}'"
-alias emacs="emacsclient -t"
 
 # Fzf
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
 # Init starship prompt
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
 eval "$(thefuck --alias)"
 eval "$(zoxide init --cmd cd zsh)"
