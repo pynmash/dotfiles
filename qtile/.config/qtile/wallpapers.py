@@ -13,3 +13,11 @@ class Wallpapers:
         
     def set_wallapaper(self):
         system(f"feh --bg-scale '/home/dan/wallapers/{self.current_wallpaper}'")
+        
+if __name__ == "__main__":
+    path = input("Enter the path to the folder where the wallpapers are stored: ")
+    if path == "":
+        path = "/home/dan/wallapers/"
+    wallpapers = Wallpapers(paper_path=path)
+    wallpapers.get_wallpaper()
+    wallpapers.set_wallapaper()
