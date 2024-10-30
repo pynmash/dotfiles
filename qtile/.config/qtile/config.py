@@ -28,9 +28,15 @@ from libqtile import bar, layout, qtile, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
+from wallpapers import Wallpapers
 
 mod = "mod4"
 terminal = guess_terminal()
+
+# Set new wallpaper when the config loads
+wallpaper = Wallpapers("/home/dan/wallpapers/")
+wallpaper.get_wallpaper()
+wallpaper.set_wallpaper()
 
 keys = [
     Key([mod], "period", lazy.next_screen(), desc="Next monitor"),
